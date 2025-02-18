@@ -3,51 +3,204 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ivan Urias - Portfolio</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Iván Urias - Portafolio</title>
+    <style>
+      <center>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .profile img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid white;
+        }
+
+        main {
+            width: 80%;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #2c3e50;
+            padding-bottom: 5px;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #2c3e50;
+            color: white;
+            width: 100%;
+            border-top: 3px solid white;
+        }
+
+        /* Estilos para los botones */
+        .social-links {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        button {
+            background-color: #2c3e50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background-color: #1a252f;
+        }
+
+        .letter-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .letter-modal-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 600px;
+            width: 80%;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .letter-modal-content p {
+            margin-bottom: 10px;
+        }
+
+        .close-button {
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            float: right;
+            font-size: 16px;
+        }
+
+        .close-button:hover {
+            background-color: #c0392b;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <div class="container">
-            <img src="static/profile.jpg" alt="Foto de Ivan Urias" class="profile-pic">
-            <h1>Ivan Urias</h1>
-            <h2>Administrador en Sistemas Informáticos y Redes</h2>
+        <div class="profile">
+            <h1>Iván Urias</h1>
+            <h2>Administrador en sistemas informáticos y redes</h2>
         </div>
     </header>
-    <main class="container">
+    <main>
         <section class="about">
-            <h3>Sobre mí</h3>
+            <h2>Sobre mí</h2>
             <ul>
                 <li>Trabajador</li>
                 <li>Puntual</li>
-                <li>Respetuoso</li>
+                <li>Responsable</li>
                 <li>Simpático</li>
                 <li>Ordenado</li>
             </ul>
         </section>
         <section class="education">
-            <h3>Datos Académicos</h3>
-            <p>GS Administración de Sistemas Informáticos en Red - Andel Instituto Tecnológico (2023 - Actualidad)</p>
-            <p>GM Sistemas Microinformáticos y Redes - Andel Instituto Tecnológico (2021 - 2023)</p>
+            <h2>Datos académicos</h2>
+            <p>Andel Instituto Tecnológico - GS Administración de Sistemas Informáticos en Red (2023 - Actualidad)</p>
+            <p>Andel Instituto Tecnológico - GM Sistemas Microinformáticos y Redes (2021 - 2023)</p>
+            <p>Varios cursos de desarrollo web, seguridad y programación.</p>
         </section>
         <section class="experience">
-            <h3>Experiencia Laboral</h3>
-            <p><strong>Tupack, Alcorcón</strong> (Julio 2022 - Febrero 2023)</p>
-            <p><strong>Syzcol, Alcorcón</strong> (Marzo 2022 - Junio 2023)</p>
+            <h2>Experiencia laboral</h2>
+            <p><strong>Tupadel, Alcorcón</strong> (Julio 2022 - Febrero 2023)</p>
+            <p><strong>Syscad, Alcorcón</strong> (Marzo 2022 - Junio 2023)</p>
+            <p><strong>Carrefour, Supeco</strong> (Junio 2023 - Septiembre 2023)</p>
+            <p><strong>Sport Direct, Islazul</strong> (Agosto 2023 - Diciembre 2024)</p>
         </section>
         <section class="skills">
-            <h3>Habilidades</h3>
-            <p>Excelente capacidad de organización, trato con clientes y trabajo en equipo.</p>
+            <h2>Habilidades</h2>
+            <p>Profesional con capacidad de organización, trabajador y con buena atención al cliente.</p>
         </section>
         <section class="contact">
-            <h3>Contacto</h3>
-            <p>📞 +34 040 973 722</p>
-            <p>✉️ ivanumps4@gmail.com</p>
+            <h2>Contacto</h2>
+            <p>Teléfono: +34 640 393 722</p>
+            <p>Email: ivanmups4@gmail.com</p>
+            <p>Ubicación: Móstoles, 28935</p>
+        </section>
+
+        <section class="social-links">
+            <h2>Mis Redes</h2>
+            <button onclick="openLink('https://github.com/IvanUrias/mi-portfolio')">GitHub</button>
+            <button onclick="openLink('https://www.linkedin.com/feed/?trk=guest_homepage-basic_google-one-tap-submit')">linkedin</button>
+            <button onclick="openLetter()">Carta de Presentación</button>
         </section>
     </main>
     <footer>
-        <p>&copy; 2025 Ivan Urias - Todos los derechos reservados</p>
+        <p>&copy; 2025 Iván Urias - Creación de un portfolio personal utilizando lenguajes de backend</p>
     </footer>
+
+    <!-- Modal de la Carta de Presentación -->
+    <div id="letterModal" class="letter-modal">
+        <div class="letter-modal-content">
+            <button class="close-button" onclick="closeLetter()">Cerrar</button>
+            <h2>Carta de Presentación</h2>
+            <p>Me dirijo a usted para expresar mi interés en formar parte de su equipo como Administrador de Sistemas Informáticos y Redes. Soy un profesional apasionado por la ciberseguridad y la administración de redes, con una sólida formación en sistemas informáticos y experiencia en diversas empresas del sector.</p>
+            <p>Actualmente, estoy finalizando mis estudios en Administración de Sistemas Informáticos en Red en el Andel Instituto Tecnológico, además de haber completado un Grado Medio en Sistemas Microinformáticos y Redes. Durante mi formación, he adquirido conocimientos en seguridad informática, desarrollo web (HTML y CSS) y aprendizaje automático, lo que me ha permitido desarrollar un enfoque integral en la gestión y protección de infraestructuras tecnológicas.</p>
+            <p>Mi experiencia laboral en empresas como Syscad y Sport Direct me ha permitido desarrollar habilidades clave en administración de redes, soporte técnico y resolución de incidencias. Además, mi capacidad organizativa y mi orientación al cliente han sido fundamentales para garantizar un servicio eficiente y de calidad.</p>
+            <p>Me considero una persona trabajadora, responsable y con gran capacidad de adaptación a los cambios tecnológicos. Mi objetivo es seguir creciendo en el ámbito de la ciberseguridad y las redes, aplicando mis conocimientos y habilidades para contribuir al éxito de su empresa.</p>
+            <p>Adjunto mi currículum para su revisión y quedo a su disposición para una entrevista en la que pueda ampliar información sobre mi perfil. Agradezco su tiempo y consideración, y espero la oportunidad de conversar sobre cómo puedo aportar valor a su equipo.</p>
+        </div>
+    </div>
+
+    <script>
+        function openLink(url) {
+            window.open(url, "_blank");
+        }
+
+        function openLetter() {
+            document.getElementById("letterModal").style.display = "flex";
+        }
+
+        function closeLetter() {
+            document.getElementById("letterModal").style.display = "none";
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            console.log("Portafolio de Iván Urias cargado correctamente.");
+        });
+    </script>
 </body>
 </html>
-
