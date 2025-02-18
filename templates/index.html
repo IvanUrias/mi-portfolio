@@ -5,27 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iván Urias - Portafolio</title>
     <style>
-      <center>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #d3dbe3;
             color: #333;
         }
 
         header {
-            background-color: #2c3e50;
-            color: white;
+            background-image: url('https://d3t4nwcgmfrp9x.cloudfront.net/upload/tendencias-futuro-tecnologia-2024.jpg');
+            background-size: cover;
+            background-position: center;
             text-align: center;
-            padding: 20px;
+            padding: 60px 20px;
+            position: relative;
         }
 
-        .profile img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            border: 3px solid white;
+        header h1, header h2 {
+            color: white;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
         }
 
         main {
@@ -43,8 +43,25 @@
             padding-bottom: 5px;
         }
 
-        section {
-            margin-bottom: 20px;
+        .skills {
+            text-align: center;
+        }
+
+        .skill-buttons button {
+            background-color: #2c3e50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+        }
+
+        .skill-buttons button:hover {
+            background-color: #1a252f;
+            transform: translateY(-3px);
         }
 
         footer {
@@ -56,13 +73,12 @@
             border-top: 3px solid white;
         }
 
-        /* Estilos para los botones */
         .social-links {
             text-align: center;
             margin: 20px 0;
         }
 
-        button {
+        .social-links button {
             background-color: #2c3e50;
             color: white;
             border: none;
@@ -74,10 +90,11 @@
             transition: background 0.3s ease-in-out;
         }
 
-        button:hover {
+        .social-links button:hover {
             background-color: #1a252f;
         }
 
+        /* Modal de la Carta de Presentación */
         .letter-modal {
             display: none;
             position: fixed;
@@ -121,10 +138,8 @@
 </head>
 <body>
     <header>
-        <div class="profile">
-            <h1>Iván Urias</h1>
-            <h2>Administrador en sistemas informáticos y redes</h2>
-        </div>
+        <h1>Iván Urias</h1>
+        <h2>Administrador en sistemas informáticos y redes</h2>
     </header>
     <main>
         <section class="about">
@@ -152,20 +167,27 @@
         </section>
         <section class="skills">
             <h2>Habilidades</h2>
-            <p>Profesional con capacidad de organización, trabajador y con buena atención al cliente.</p>
-        </section>
-        <section class="contact">
-            <h2>Contacto</h2>
-            <p>Teléfono: +34 640 393 722</p>
-            <p>Email: ivanmups4@gmail.com</p>
-            <p>Ubicación: Móstoles, 28935</p>
+            <div class="skill-buttons">
+                <button>Python</button>
+                <button>HTML</button>
+                <button>VMware</button>
+                <button>Packet Tracer</button>
+                <button>PowerShell</button>
+            </div>
         </section>
 
         <section class="social-links">
             <h2>Mis Redes</h2>
             <button onclick="openLink('https://github.com/IvanUrias/mi-portfolio')">GitHub</button>
-            <button onclick="openLink('https://www.linkedin.com/feed/?trk=guest_homepage-basic_google-one-tap-submit')">linkedin</button>
+            <button onclick="openLink('https://www.linkedin.com/feed/?trk=guest_homepage-basic_google-one-tap-submit')">LinkedIn</button>
             <button onclick="openLetter()">Carta de Presentación</button>
+        </section>
+
+        <section class="contact">
+            <h2>Contacto</h2>
+            <p>Teléfono: +34 640 393 722</p>
+            <p>Email: ivanmups4@gmail.com</p>
+            <p>Ubicación: Móstoles, 28935</p>
         </section>
     </main>
     <footer>
