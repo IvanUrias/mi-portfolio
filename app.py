@@ -1,6 +1,7 @@
 from flask import Flask, render_template
 
-app = Flask(__name__)
+# Configuración para servir archivos estáticos desde la carpeta 'static'
+app = Flask(__name__, static_folder='static')
 
 @app.route('/')
 def home():
@@ -20,3 +21,8 @@ def contact():
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
+
+
+
+
+    
